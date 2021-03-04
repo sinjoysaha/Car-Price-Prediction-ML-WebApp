@@ -1,21 +1,81 @@
 {% extends 'base.html' %}
 
-{% block title %}Welcome to Sentiment Analysis WebApp{% endblock %}
+{% block title %}Welcome to Car Price Prediction ML WebApp{% endblock %}
 
 {% block content %}
 
 <div class="container">
     <div class="d-grid mx-auto col-9">
         <br>
-        <h1>Welcome to Used Car Price Prediction</h1>
-        <br><br><br>
-        <form action="#" method="POST">
-            <div class="mb-5">
-                <input type="text" class="form-control input-lg" id="review" placeholder="Review Text" name="review">
+        <div>
+            <h3 class="d-flex justify-content-center">Welcome to</h3>
+            <h1 class="d-flex justify-content-center">Used Car Price Prediction ML WebApp</h1>
+            <br><br><br>
+        </div>
+<!-- INPUTS
+year
+present price
+km_driven
+fuel type - petrol diesel cng   *
+seller_type - dealer individual *
+transmission - manual automatic *
+Owner - 0 1 2 3
+-->
+<form action="#" method="POST">
+    <div class="row">
+        <div class="col">
+            <h5>Seller Type</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="dealer">
+                <label class="form-check-label" for="dealer">
+                    Dealer
+                </label>
             </div>
-            <button type="submit" class="btn btn-primary d-grid mx-auto">Analyze</button>
-        </form>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="individual" checked>
+                <label class="form-check-label" for="individual">Individual
+                </label>
+            </div>
+        </div>
+        <div class="col">
+            <h5>Transmission</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="manual">
+                <label class="form-check-label" for="manual">
+                    Manual
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="automatic" checked>
+                <label class="form-check-label" for="automatic">Automatic
+                </label>
+            </div>
+        </div>
+        <div class="col">
+            <h5>Fuel Type</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="manual">
+                <label class="form-check-label" for="manual">
+                    Petrol
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="automatic" checked>
+                <label class="form-check-label" for="automatic">Diesel
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="manual">
+                <label class="form-check-label" for="manual">
+                    CNG
+                </label>
+            </div>
+        </div>
     </div>
+    <br><br>
+    <button type="submit" class="btn btn-primary d-grid mx-auto">Analyze</button>
+</form>
+</div>
 </div>
 
 {% endblock %}
