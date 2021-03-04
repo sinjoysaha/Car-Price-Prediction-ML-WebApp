@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to Sentiment Analysis WebApp{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="d-grid mx-auto col-9">
+        <br>
+        <h1>Welcome to Used Car Price Prediction</h1>
+        <br><br><br>
+        <form action="#" method="POST">
+            <div class="mb-5">
+                <input type="text" class="form-control input-lg" id="review" placeholder="Review Text" name="review">
+            </div>
+            <button type="submit" class="btn btn-primary d-grid mx-auto">Analyze</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
