@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/media/sinjoy/Docs/Documents/GitHub Repos/Car-Price-Prediction/virtual"
+VIRTUAL_ENV="/media/sinjoy/Docs/Documents/GitHub Repos/Car-Price-Prediction-ML-WebApp/virtual"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

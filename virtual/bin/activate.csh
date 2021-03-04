@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/media/sinjoy/Docs/Documents/GitHub Repos/Car-Price-Prediction/virtual"
+setenv VIRTUAL_ENV "/media/sinjoy/Docs/Documents/GitHub Repos/Car-Price-Prediction-ML-WebApp/virtual"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

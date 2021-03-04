@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/media/sinjoy/Docs/Documents/GitHub Repos/Car-Price-Prediction/virtual"
+set -gx VIRTUAL_ENV "/media/sinjoy/Docs/Documents/GitHub Repos/Car-Price-Prediction-ML-WebApp/virtual"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

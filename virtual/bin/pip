@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/media/sinjoy/Docs/Documents/GitHub Repos/Car-Price-Prediction/virtual/bin/python3" "$0" "$@"
+'''exec' "/media/sinjoy/Docs/Documents/GitHub Repos/Car-Price-Prediction-ML-WebApp/virtual/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
