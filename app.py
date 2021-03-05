@@ -12,9 +12,25 @@ def model():
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    m = model()
-    m = str(m.best_params_)
-    return render_template('index.html', model=m)
+    if request.method=='POST':
+        seller_type = request.form['seller-type']
+        transmission = request.form['transmission']
+        fuel_type = request.form['fuel-type']
+        owner = request.form.get('owners')
+        kms_driven = request.form.get('kms-driven')
+        present_price = request.form.get('present-price')
+        year = request.form.get('year')
+        formvalues = {'seller_type':seller_type,
+                      'transmission':transmission,
+                      'fuel_type':fuel_type,
+                      'owner':owner,
+                      'kms_driven':kms_driven,
+                      'present_price':present_price,
+                      'year':year}
+        return render_template('index.html', formvalues=formvalues)
+
+    else:
+        return render_template('index.html')
 
 @app.route('/about')
 def about():
