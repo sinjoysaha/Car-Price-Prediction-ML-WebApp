@@ -5,73 +5,92 @@
 {% block content %}
 
 <div class="container">
-    <div class="d-grid mx-auto col-9">
-        <br>
+    <div class="d-grid mx-auto col">
         <div>
             <h3 class="d-flex justify-content-center">Welcome to</h3>
             <h1 class="d-flex justify-content-center">Used Car Price Prediction ML WebApp</h1>
-            <br><br><br>
+            <br><br>
         </div>
 <!-- INPUTS
-year
-present price
-km_driven
+year                            *
+present Price                   *
+km_driven                       *
 fuel type - petrol diesel cng   *
 seller_type - dealer individual *
 transmission - manual automatic *
-Owner - 0 1 2 3
+Owner - 0 1 2 3                 *
 -->
 <form action="#" method="POST">
     <div class="row">
-        <div class="col">
+        <div class="col-sm">
             <h5>Seller Type</h5>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="dealer">
+                <input class="form-check-input" type="radio" name="seller-type" id="dealer">
                 <label class="form-check-label" for="dealer">
                     Dealer
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="individual" checked>
+                <input class="form-check-input" type="radio" name="seller-type" id="individual" checked>
                 <label class="form-check-label" for="individual">Individual
                 </label>
             </div>
         </div>
-        <div class="col">
+        <div class="col-sm">
             <h5>Transmission</h5>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="manual">
+                <input class="form-check-input" type="radio" name="transmission" id="manual">
                 <label class="form-check-label" for="manual">
                     Manual
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="automatic" checked>
+                <input class="form-check-input" type="radio" name="transmission" id="automatic" checked>
                 <label class="form-check-label" for="automatic">Automatic
                 </label>
             </div>
         </div>
-        <div class="col">
+        <div class="col-sm">
             <h5>Fuel Type</h5>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="manual">
+                <input class="form-check-input" type="radio" name="fuel-type" id="manual">
                 <label class="form-check-label" for="manual">
                     Petrol
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="automatic" checked>
+                <input class="form-check-input" type="radio" name="fuel-type" id="automatic" checked>
                 <label class="form-check-label" for="automatic">Diesel
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="manual">
+                <input class="form-check-input" type="radio" name="fuel-type" id="manual">
                 <label class="form-check-label" for="manual">
                     CNG
                 </label>
             </div>
         </div>
+        <div class="form-group col-lg">
+            <h5>Number of Previous Owners</h5>
+            <span> 0 </span><input type="range" class="w-75" min="0" max="5" step="1" id="owner"><span> 5 </span>
+        </div>
     </div>
+    <br>
+    <div class="row">
+        <div class="form-group col-lg">
+            <h5>Kms Driven</h5>
+            <input type="number" class="form-control" id="kms-driven" min="0"/>
+        </div>
+        <div class="form-group col-lg-6">
+            <h5>Present Price of New Car</h5>
+            <input type="number" class="form-control" id="present-price" min="0"/>
+        </div>
+        <div class="form-group col-lg">
+            <h5>Year</h5>
+            <input type="number" class="form-control" id="year" min="0"/>
+        </div>
+    </div>
+
     <br><br>
     <button type="submit" class="btn btn-primary d-grid mx-auto">Analyze</button>
 </form>

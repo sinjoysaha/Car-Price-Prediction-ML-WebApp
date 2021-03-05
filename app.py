@@ -10,7 +10,7 @@ def model():
 
     return loaded_model
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     m = model()
     m = str(m.best_params_)
