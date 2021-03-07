@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 def model():
-  with open('model_rfr_rscv.pkl', 'rb') as f:
+  with open('models/model_rfr_rscv.pkl', 'rb') as f:
     loaded_model = pickle.load(f)
 
   return loaded_model
