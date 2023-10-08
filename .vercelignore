@@ -1,5 +1,9 @@
 .ipynb_checkpoints
 virtual
 venv-win
+.data
+Car_Price_Prediction_Model.ipynb
+.templates/about.html
+.templates/contact.html
 
 .vercel
